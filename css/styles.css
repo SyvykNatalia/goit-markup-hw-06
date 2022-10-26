@@ -811,26 +811,52 @@ letter-spacing: 0.01em;
 color: rgba(117, 117, 117, 0.5);
 } 
 
- .check-label {
+.check-label {
+   display: flex;
+   justify-content: center;
+   align-items: center;
   font-size: 14px;
 line-height: 1.7;
 color: var(--secondary-text-color);
-margin-left: 8px;
+gap: 8px;
+margin-top: 20px;
+cursor: pointer;
 }
 .check-link {
    color: var(--accent-color);
 }
-.check {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-margin-top: 20px;
+.checkbox-input {
+ display: flex;
+align-items: center;
+justify-content: center;
+width: 16px;
+height: 15px;
+border: 2px solid var(--primary-text-color);
+border-radius: 3px;
 }
+.check-input.visually-hidden {
+      position: absolute;
+         white-space: nowrap;
+         width: 1px;
+         height: 1px;
+         overflow: hidden;
+         border: 0;
+         padding: 0;
+         clip: rect(0 0 0 0);
+         clip-path: inset(50%);
+         margin: -1px;
+   }
+.check-icon {
+   color: var(--third-text-color);
+      }
+   .check-icon {
+fill: currentColor;
+   }
 
-.check input {
-   appearance: none;
+.check-input:checked + .check-icon {
+   background-color: var(--accent-color);
+   border: none;
 }
-
 .go {
    display: flex;
    justify-content: center;
