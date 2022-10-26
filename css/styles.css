@@ -773,6 +773,7 @@ margin-bottom: 10px;
    height: 40px;
    border: 1px solid rgba(33, 33, 33, 0.2);
    border-radius: 4px;
+   padding: 12px 12px 12px 24px;
 }
 .sign {
    position: relative;
@@ -809,33 +810,27 @@ line-height: 1.2;
 letter-spacing: 0.01em;
 color: rgba(117, 117, 117, 0.5);
 } 
-.choose {
-   display: flex;
-   margin-top: 20px;
-align-items: center;
-   justify-content: center;
-}
- .choose-label {
-font-size: 14px;
+
+ .check-label {
+  font-size: 14px;
 line-height: 1.7;
 color: var(--secondary-text-color);
-margin-left: 9px;
-
-  }
-  .choose input {
-   opacity: 0;
-   }
-  .check {
-   position: relative;
- }
-  .checkbox-icon {
-   position: absolute;
-   top: 0;
-   left: 0;
-   }
-.choose-link {
+margin-left: 8px;
+}
+.check-link {
    color: var(--accent-color);
 }
+.check {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+margin-top: 20px;
+}
+
+.check input {
+   appearance: none;
+}
+
 .go {
    display: flex;
    justify-content: center;
@@ -854,5 +849,5 @@ margin-left: 9px;
     letter-spacing: 0.06em;
    margin-top: 30px;
    margin-bottom: 40px;
+   cursor: pointer;
 }
- 
