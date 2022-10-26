@@ -707,15 +707,16 @@ padding: 6px;
 border-radius: 50%;
 cursor: pointer;
 }
-
+ .footer-div {
+   margin-left: 93px;
+  } 
 .form-footer {
    display: flex;
    }
-
 .button-footer {
    display: flex;
-   gap: 12px;
-   margin-left: 12px;
+    margin-left: 12px;
+    gap: 12px;
    justify-content: center;
    align-items: center;
    width: 200px;
@@ -737,9 +738,7 @@ cursor: pointer;
    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
    border-radius: 4px;
    background-color: var(--primary-bc-color);
-   
-   
-}
+   }
 .form-footer input::placeholder {
 font-weight: 400;
 font-size: 16px;
@@ -750,8 +749,8 @@ color: rgba(255, 255, 255, 0.6);
 background-color: var(--primary-bc-color);
 padding-left: 15px;
 }
-.form-text {
-   margin-top: 40px;
+.form-text { 
+  margin-top: 40px;
    margin-bottom: 12px;
    font-weight: 700;
       font-size: 20px;
@@ -773,7 +772,7 @@ margin-bottom: 10px;
    height: 40px;
    border: 1px solid rgba(33, 33, 33, 0.2);
    border-radius: 4px;
-   padding: 12px 12px 12px 24px;
+   padding: 12px 12px 12px 26px;
 }
 .sign {
    position: relative;
@@ -782,6 +781,7 @@ margin-bottom: 10px;
    position: absolute;
    top: 11px;
    left: 12px;
+   fill: currentColor;
 }
 
 .form-label {
@@ -792,6 +792,14 @@ margin-bottom: 10px;
       letter-spacing: 0.01em;
       color: var(--secondary-text-color);
 }
+.form-input {
+   outline: none;
+}
+.form-input:focus + .form-icon {
+   border-color: var(--accent-color);
+   color: var(--accent-color);
+}
+
 .form-comment {
    display: flex;
    flex-direction: column;
@@ -829,8 +837,11 @@ cursor: pointer;
  display: flex;
 align-items: center;
 justify-content: center;
-width: 16px;
-height: 15px;
+position: relative;
+}
+.checkbox-icon {
+   width: 16px;
+ height: 15px;
 border: 2px solid var(--primary-text-color);
 border-radius: 3px;
 }
@@ -847,15 +858,17 @@ border-radius: 3px;
          margin: -1px;
    }
 .check-icon {
-   color: var(--third-text-color);
-      }
+   position: absolute;
+   top: 0;
+   left: 0;
+  color: var(--third-text-color);
+}
    .check-icon {
 fill: currentColor;
    }
-
-.check-input:checked + .check-icon {
+  
+.check-input:checked + .checkbox-icon {
    background-color: var(--accent-color);
-   border: none;
 }
 .go {
    display: flex;
